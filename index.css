@@ -1,169 +1,188 @@
-body {
-    margin: 0;
-    background: #FFF0C9;
-    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
-    font-size: 18px;
+body{
+    margin:0;
+    background:#FFF0C9;
+    font-family:'Comic Sans MS','Trebuchet MS',sans-serif;
 }
 
-/* ================= LOGO CONTAINER ================= */
-.logo {
-    display: block;
-    margin: 30px auto 0;
-    width: 400px;
-    height: auto;
-    transform: rotate(20deg);
+.logo{
+    display:block;
+    margin:10px auto;
+    width:380px;
+    transform:rotate(20deg);
+}
+
+/* MENU */
+
+.nav-top{
+    margin:20px 0 40px;
+}
+
+.nav-top ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+    padding:0;
+}
+
+.nav-top a{
+    text-decoration:none;
+    background:#ff6167;
+    color:white;
+    padding:14px 30px;
+    border-radius:12px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.nav-top a:hover{
+    background:#ff4f5c;
 }
 
 
-/* ================= LAYOUT PRINCIPAL ================= */
-main {
-    position: relative;
-    max-width: 1400px;
-    margin: 70px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 0 60px;
+main{
+    max-width:1400px;
+    margin:40px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:70px;
 }
 
-/* ================= BLOCO TABELA + ESTRELAS ================= */
-section {
-    position: relative;
-    width: 620px;
-    flex-shrink: 0;
-    min-width: 0;
+section{
+    position:relative;
+    width:650px;
 }
 
-section table {
-    box-sizing: border-box;
-    border: 4px solid #ff6167;
-    border-radius: 28px;
-    padding: 30px;
-    background: #fff8e6;
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 10px 25px rgba(255, 97, 103, 0.25);
+table{
+    width:100%;
+    border:4px solid #ff6167;
+    border-radius:25px;
+    background:#fff8e6;
+    padding:25px;
+    border-collapse:collapse;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-figcaption {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
+caption{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+    color:#333;
 }
 
-thead th {
+thead th{
+    background:#ff6167;
+    color:white;
+    padding:15px;
+}
+
+tbody td{
+    padding:15px;
+    border-bottom:1px solid #f5d9a8;
+    text-align:center;
+}
+
+tbody tr:nth-child(even){
+    background:#ffe9c2;
+}
+
+tbody img{
+    width:80px;
+    height:80px;
+    border-radius:12px;
+    object-fit:cover;
+}
+
+
+.estrela-topo{
+    position:absolute;
+    width:80px;
+    top:-20px;
+    left:-35px;
+}
+
+.estrela-baixo{
+    position:absolute;
+    width:70px;
+    right:-25px;
+    bottom:-25px;
+}
+
+
+.alcremie{
+    width:590px;
+}
+
+
+.section-two{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    max-width:1400px;
+    width:100%;
+
+    margin:80px auto;
+    padding:0 40px;
+    gap:60px;
+
+    box-sizing:border-box;
+}
+
+.alcremie-amarelo{
+    width:380px;
+    height:auto;
+    flex:0 0 380px;
+}
+
+.container{
+    flex:1;
+    max-width:750px;
+    min-width:500px;
+
+    background:#fff8e6;
+
+    border:4px solid #ff6167;
+    border-radius:30px;
+
+    padding:40px;
+
+    box-sizing:border-box;
+
+    box-shadow:0 10px 25px rgba(255,97,103,.25);
+}
+
+.container h2{
+    margin:0 0 20px;
+    color:#ff6167;
+    font-size:34px;
+    text-align:center;
+}
+
+.container p{
+    color:#ac3e41;
+    margin:0;
+    font-size:20px;
+    line-height:1.7;
+    text-align:justify;
+}
+
+footer.container{
+    color:#ac3e41;
+    max-width:1400px;
+    margin:0 auto;
+    padding:0 40px;
+    box-sizing:border-box;
+}
+footer{
     background: #ff6167;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px 8px 0 0;
-}
-
-tbody tr:nth-child(even) {
-    background: #ffe9c2;
-}
-
-tbody td {
-    padding: 14px 10px;
-    text-align: center;
-    border-bottom: 1px solid #f5d9a8;
-    font-size: 15px;
-}
-
-tbody td img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* estrelinhas */
-
-
-.estrela {
-    margin: 0;
-    position: absolute;
-    width: 15%;
-    height: 15%;
-    pointer-events: none;
-    position: absolute;
-}
-
-.estrela-topo {
-    margin: 0;
-    position: absolute;
-    left: -50px;
-    top: 15px;
-    width: 17%;
-    height: 17%;
-   
-}
-
-.estrela-baixo {
-    position: absolute;
-    right: -40px;
-    bottom: -40px;
-    width: 14%;
-    height: 14%;
-}
-
-/* ================= MENU ================= */
-nav {
-    flex-shrink: 0;
-    width: 170px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-nav li {
-    margin: 0;
-}
-
-nav a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    background: #ff6167;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 14px 10px;
-    border-radius: 12px;
-    transition: background 0.2s, transform 0.2s;
-}
-
-nav a:hover {
-    background: #ff6167;
-    transform: translateY(-2px);
-}
-
-/* ================= ALCREMIE ================= */
-.alcremie {
-    width: 600px;
-    flex-shrink: 0;
-}
-
-/* ================= RODAPÉ ================= */
-footer {
-    background: #ff6167;
+    text-align:left;
+    margin:80px 0 0;
     color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
     padding: 25px 60px;
-    margin-top: 60px;
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-footer p {
-    margin: 0;
 }
