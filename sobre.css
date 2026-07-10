@@ -2,28 +2,40 @@ body{
     margin:0;
     background:#FFF0C9;
     font-family:'Comic Sans MS','Trebuchet MS',sans-serif;
+    color:#333;
+    box-sizing:border-box;
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
 }
 
 .logo{
     display:block;
-    margin:10px auto;
-    width:380px;
+    margin:10px auto 0;
+    width:min(100%, 380px);
+    max-width:380px;
     transform:rotate(20deg);
 }
 
 .nav-top{
     margin:20px 0 40px;
+    padding:0 20px;
 }
 
 .nav-top ul{
     display:flex;
     justify-content:center;
-    gap:30px;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px 30px;
     list-style:none;
     padding:0;
+    margin:0;
 }
 
 .nav-top a{
+    display:inline-block;
     text-decoration:none;
     background:#ff6167;
     color:white;
@@ -40,20 +52,28 @@ body{
 
 main{
     max-width:1200px;
+    width:100%;
     margin:40px auto;
     position:relative;
     padding:0 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    box-sizing:border-box;
 }
 
 .estrela{
     position:absolute;
-    left:-40px;
-    top:20px;
+    left:-20px;
+    top:10px;
     width:90px;
 }
 
 .historia,
 .curiosidade{
+    width:100%;
+    max-width:900px;
     background:#fff8e6;
     border:4px solid #ff6167;
     border-radius:30px;
@@ -78,13 +98,15 @@ main{
 }
 
 .cards{
+    width:100%;
+    max-width:900px;
     display:flex;
     gap:30px;
-    margin:40px 0;
+    flex-wrap:wrap;
 }
 
 .card{
-    flex:1;
+    flex:1 1 280px;
     background:#fff8e6;
     border:4px solid #ff6167;
     border-radius:25px;
@@ -106,10 +128,6 @@ main{
     text-align:justify;
 }
 
-.curiosidade{
-    margin-bottom:60px;
-}
-
 footer{
     background:#ff6167;
     color:white;
@@ -118,4 +136,55 @@ footer{
 
 footer p{
     margin:8px 0;
+}
+
+@media (max-width:700px){
+    .estrela{
+        position:static;
+        align-self:flex-start;
+        margin-bottom:8px;
+        width:70px;
+    }
+
+    .historia,
+    .curiosidade,
+    .card{
+        padding:24px;
+    }
+
+    .historia h2,
+    .curiosidade h2,
+    .card h3{
+        font-size:28px;
+    }
+
+    .historia p,
+    .curiosidade p,
+    .card p{
+        font-size:18px;
+    }
+
+    footer{
+        padding:20px 24px;
+    }
+}
+
+@media (max-width:500px){
+    .logo{
+        width:220px;
+    }
+
+    .nav-top ul{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-top a{
+        width:100%;
+        text-align:center;
+    }
+
+    main{
+        padding:0 16px;
+    }
 }

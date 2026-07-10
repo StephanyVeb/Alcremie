@@ -2,30 +2,40 @@ body{
     margin:0;
     background:#FFF0C9;
     font-family:'Comic Sans MS','Trebuchet MS',sans-serif;
+    color:#333;
+    box-sizing:border-box;
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
 }
 
 .logo{
     display:block;
-    margin:10px auto;
-    width:380px;
+    margin:10px auto 0;
+    width:min(100%, 380px);
+    max-width:380px;
     transform:rotate(20deg);
 }
 
-
-
 .nav-top{
     margin:20px 0 40px;
+    padding:0 20px;
 }
 
 .nav-top ul{
     display:flex;
     justify-content:center;
-    gap:30px;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px 30px;
     list-style:none;
     padding:0;
+    margin:0;
 }
 
 .nav-top a{
+    display:inline-block;
     text-decoration:none;
     background:#ff6167;
     color:white;
@@ -33,27 +43,30 @@ body{
     border-radius:12px;
     font-weight:bold;
     font-size:20px;
+    transition:.2s;
 }
 
 .nav-top a:hover{
     background:#ff4f5c;
 }
 
-
 main{
     max-width:1400px;
+    width:100%;
     margin:40px auto;
-
+    padding:0 20px;
     display:flex;
     justify-content:center;
     align-items:center;
-
-    gap:70px;
+    flex-wrap:wrap;
+    gap:40px 70px;
+    box-sizing:border-box;
 }
 
 section{
     position:relative;
-    width:650px;
+    flex:1 1 650px;
+    max-width:650px;
 }
 
 table{
@@ -96,7 +109,6 @@ tbody img{
     object-fit:cover;
 }
 
-
 .estrela-topo{
     position:absolute;
     width:80px;
@@ -111,47 +123,42 @@ tbody img{
     bottom:-25px;
 }
 
-
 .alcremie{
-    width:590px;
+    width:min(100%, 590px);
+    max-width:590px;
+    height:auto;
+    flex:0 1 590px;
 }
-
 
 .section-two{
     display:flex;
     justify-content:center;
     align-items:center;
-
+    flex-wrap:wrap;
     max-width:1400px;
     width:100%;
-
     margin:80px auto;
-    padding:0 40px;
-    gap:60px;
-
+    padding:0 20px;
+    gap:40px 60px;
     box-sizing:border-box;
 }
 
 .alcremie-amarelo{
-    width:380px;
+    width:min(100%, 380px);
+    max-width:380px;
     height:auto;
-    flex:0 0 380px;
+    flex:0 1 380px;
 }
 
 .container{
-    flex:1;
+    flex:1 1 320px;
     max-width:750px;
-    min-width:500px;
-
+    min-width:min(100%, 320px);
     background:#fff8e6;
-
     border:4px solid #ff6167;
     border-radius:30px;
-
     padding:40px;
-
     box-sizing:border-box;
-
     box-shadow:0 10px 25px rgba(255,97,103,.25);
 }
 
@@ -170,19 +177,78 @@ tbody img{
     text-align:justify;
 }
 
-footer.container{
-    color:#ac3e41;
-    max-width:1400px;
-    margin:0 auto;
-    padding:0 40px;
-    box-sizing:border-box;
-}
 footer{
-    background: #ff6167;
+    background:#ff6167;
     text-align:left;
     margin:80px 0 0;
-    color: #ffffff;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 25px 60px;
+    color:#ffffff;
+    width:100%;
+    box-sizing:border-box;
+    padding:25px 60px;
+}
+
+@media (max-width:900px){
+    main{
+        gap:30px;
+    }
+
+    .section-two{
+        margin-top:50px;
+    }
+
+    .container{
+        padding:30px;
+    }
+}
+
+@media (max-width:600px){
+    .logo{
+        width:220px;
+    }
+
+    .nav-top ul{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-top a{
+        width:100%;
+        text-align:center;
+    }
+
+    section{
+        min-width:0;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    caption{
+        font-size:24px;
+    }
+
+    .alcremie,
+    .alcremie-amarelo{
+        max-width:280px;
+    }
+
+    .container{
+        padding:22px;
+        border-radius:20px;
+    }
+
+    .container h2{
+        font-size:28px;
+    }
+
+    .container p{
+        font-size:18px;
+    }
+
+    footer{
+        padding:20px 24px;
+        text-align:center;
+    }
 }
