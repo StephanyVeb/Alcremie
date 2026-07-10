@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Alcremie</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+
+    <img src="img/logo.webp" alt="Logo" class="logo">
+
+    <nav class="nav-top">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="formulario">
+
+            <h2>Entre em Contato</h2>
+
+            <p class="descricao">
+                Gostou dos nossos sorvetes ou quer experimentar um sabor especial?
+                Utilize o formulário abaixo para enviar dúvidas, sugestões, elogios
+                ou solicitar informações sobre encomendas. Nossa equipe responderá
+                o mais rápido possível para garantir a melhor experiência com a
+                Alcremie.
+            </p>
+
+            <form action="#">
+
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+
+                <label for="email">E-mail para Contato</label>
+                <input type="email" id="email" placeholder="exemplo@email.com">
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+                <label for="data">Data de Nascimento</label>
+                <input type="date" id="data">
+
+                <label for="mes">Mês Favorito para Visitar</label>
+                <input type="month" id="mes">
+
+                <label for="sabor">Qual é seu sabor favorito?</label>
+                <select id="sabor">
+                    <option>Morango</option>
+                    <option>Chocolate</option>
+                    <option>Baunilha</option>
+                    <option>Maracujá</option>
+                    <option>Flocos</option>
+                </select>
+
+                <label for="foto">Envie uma foto (opcional)</label>
+                <input type="file" id="foto">
+
+                <label for="mensagem">Como podemos ajudar?</label>
+                <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+
+                <label>Como conheceu a Alcremie?</label>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="origem">
+                        Instagram
+                    </label>
+
+                    <label>
+                        <input type="radio" name="origem">
+                        Amigos
+                    </label>
+
+                    <label>
+                        <input type="radio" name="origem">
+                        Google
+                    </label>
+
+                </div>
+
+                <label class="check">
+                    <input type="checkbox">
+                    Desejo receber promoções e novidades da Alcremie.
+                </label>
+
+                <div class="botoes">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Endereço: Rua Docinho, 912 - Gelato, Galar</p>
+        <p>Telefone: (12) 3456-7890</p>
+        <p>© 2024 Alcremie. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
