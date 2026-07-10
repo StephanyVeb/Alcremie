@@ -1,0 +1,167 @@
+body{
+
+    margin:0;
+    background:#FFF0C9;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+
+header{
+
+    background:#ff6167;
+    height:120px;
+    text-align:center;
+    position:relative;
+
+}
+
+.logo{
+
+    width:180px;
+    position:absolute;
+    left:120px;
+    top:15px;
+    transform:rotate(-6deg);
+
+}
+
+header h2{
+
+    padding-top:75px;
+    color:black;
+    font-weight:normal;
+
+}
+
+
+
+.conteudo{
+
+    position:relative;
+    min-height:500px;
+
+}
+
+
+.receitas{
+
+    width:600px;
+    margin-left:40px;
+    margin-top:30px;
+    border:3px solid #ff6167;
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+caption{
+
+    font-size:22px;
+    margin-bottom:20px;
+
+}
+
+th{
+
+    background:#ff6167;
+    color:white;
+    padding:10px;
+
+}
+
+td{
+
+    padding:10px;
+    text-align:center;
+
+}
+
+
+
+nav{
+
+    position:absolute;
+    left:720px;
+    top:80px;
+
+}
+
+nav ul{
+
+    list-style:none;
+    padding:0;
+
+}
+
+nav li{
+
+    margin:25px 0;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:black;
+    font-size:25px;
+    font-weight:bold;
+
+}
+
+nav a:hover{
+
+    color:#ff6167;
+
+}
+
+
+
+.alcremie{
+
+    position:absolute;
+    right:40px;
+    top:10px;
+    width:260px;
+
+}
+
+
+
+.estrela1{
+
+    position:absolute;
+    width:60px;
+    left:-30px;
+    top:-30px;
+
+}
+
+.estrela2{
+
+    position:absolute;
+    width:60px;
+    right:-30px;
+    bottom:-30px;
+
+}
+
+
+
+footer{
+
+    margin-top:40px;
+    background:#ff6167;
+    color:white;
+    padding:20px;
+
+}
