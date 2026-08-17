@@ -1,254 +1,284 @@
-body{
-    margin:0;
-    background:#FFF0C9;
-    font-family:'Comic Sans MS','Trebuchet MS',sans-serif;
-    color:#333;
-    box-sizing:border-box;
-}
+body{ 
+    margin:0; 
+    background:#FFF0C9; 
+    font-family:'Comic Sans MS','Trebuchet MS',sans-serif; 
+    color:#333; 
+    box-sizing:border-box; 
+} 
+ 
+*, *::before, *::after { 
+    box-sizing:inherit; 
+} 
+ 
+.logo{ 
+    display:block; 
+    margin:10px auto 0; 
+    width:min(100%, 380px); 
+    max-width:380px; 
+    transform:rotate(20deg); 
+} 
+ 
+.nav-top{ 
+    margin:20px 0 40px; 
+    padding:0 20px; 
+} 
+ 
+.nav-top ul{ 
+    /*
+    organiza links em colunas automáticas.
+    Cada link ocupa uma coluna e o gap da o espaço entre eles.
+    */
+    display:grid; 
+    grid-template-columns:repeat(auto-fit, max-content); 
+    justify-content:center; 
+    align-items:center; 
+    gap:20px 30px; 
+    list-style:none; 
+    padding:0; 
+    margin:0; 
+} 
+ 
+.nav-top a{ 
+    display:inline-block; 
+    text-decoration:none; 
+    background:#ff6167; 
+    color:white; 
+    padding:14px 30px; 
+    border-radius:12px; 
+    font-weight:bold; 
+    font-size:20px; 
+    transition:.2s; 
+} 
+ 
+.nav-top a:hover{ 
+    background:#ff4f5c; 
+} 
+ 
+main{ 
+    max-width:1400px; 
+    width:100%; 
+    margin:40px auto; 
+    padding:0 20px; 
 
-*, *::before, *::after {
-    box-sizing:inherit;
-}
-
-.logo{
-    display:block;
-    margin:10px auto 0;
-    width:min(100%, 380px);
-    max-width:380px;
-    transform:rotate(20deg);
-}
-
-.nav-top{
-    margin:20px 0 40px;
-    padding:0 20px;
-}
-
-.nav-top ul{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px 30px;
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-
-.nav-top a{
-    display:inline-block;
-    text-decoration:none;
-    background:#ff6167;
-    color:white;
-    padding:14px 30px;
-    border-radius:12px;
-    font-weight:bold;
-    font-size:20px;
-    transition:.2s;
-}
-
-.nav-top a:hover{
-    background:#ff4f5c;
-}
-
-main{
-    max-width:1400px;
-    width:100%;
-    margin:40px auto;
-    padding:0 20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:40px 70px;
-    box-sizing:border-box;
-}
-
-section{
-    position:relative;
-    flex:1 1 650px;
-    max-width:650px;
-}
-
-table{
-    width:100%;
-    border:4px solid #ff6167;
-    border-radius:25px;
-    background:#fff8e6;
-    padding:25px;
-    border-collapse:collapse;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-caption{
-    font-size:30px;
-    font-weight:bold;
-    margin-bottom:20px;
-    color:#333;
-}
-
-thead th{
-    background:#ff6167;
-    color:white;
-    padding:15px;
-}
-
-tbody td{
-    padding:15px;
-    border-bottom:1px solid #f5d9a8;
-    text-align:center;
-}
-
-tbody tr:nth-child(even){
-    background:#ffe9c2;
-}
-
-tbody img{
-    width:80px;
-    height:80px;
-    border-radius:12px;
-    object-fit:cover;
-}
-
-.estrela-topo{
-    position:absolute;
-    width:80px;
-    top:-20px;
-    left:-35px;
-}
-
-.estrela-baixo{
-    position:absolute;
-    width:70px;
-    right:-25px;
-    bottom:-25px;
-}
-
-.alcremie{
-    width:min(100%, 590px);
-    max-width:590px;
-    height:auto;
-    flex:0 1 590px;
-}
-
-.section-two{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    max-width:1400px;
-    width:100%;
-    margin:80px auto;
-    padding:0 20px;
-    gap:40px 60px;
-    box-sizing:border-box;
-}
-
-.alcremie-amarelo{
-    width:min(100%, 380px);
-    max-width:380px;
-    height:auto;
-    flex:0 1 380px;
-}
-
-.container{
-    flex:1 1 320px;
-    max-width:750px;
-    min-width:min(100%, 320px);
-    background:#fff8e6;
-    border:4px solid #ff6167;
-    border-radius:30px;
-    padding:40px;
-    box-sizing:border-box;
-    box-shadow:0 10px 25px rgba(255,97,103,.25);
-}
-
-.container h2{
-    margin:0 0 20px;
-    color:#ff6167;
-    font-size:34px;
-    text-align:center;
-}
-
-.container p{
-    color:#ac3e41;
-    margin:0;
-    font-size:20px;
-    line-height:1.7;
-    text-align:justify;
-}
-
-footer{
-    background:#ff6167;
-    text-align:left;
-    margin:80px 0 0;
-    color:#ffffff;
-    width:100%;
-    box-sizing:border-box;
-    padding:25px 60px;
-}
-
-@media (max-width:900px){
-    main{
-        gap:30px;
-    }
-
-    .section-two{
-        margin-top:50px;
-    }
-
-    .container{
-        padding:30px;
-    }
-}
-
-@media (max-width:600px){
-    .logo{
-        width:220px;
-    }
-
-    .nav-top ul{
-        flex-direction:column;
-        gap:12px;
-    }
-
-    .nav-top a{
-        width:100%;
-        text-align:center;
-    }
-
-    section{
-        min-width:0;
-    }
-
-    table{
-        display:block;
-        overflow-x:auto;
-    }
-
-    caption{
-        font-size:24px;
-    }
-
-    .alcremie,
-    .alcremie-amarelo{
-        max-width:280px;
-    }
-
-    .container{
-        padding:22px;
-        border-radius:20px;
-    }
-
-    .container h2{
-        font-size:28px;
-    }
-
-    .container p{
-        font-size:18px;
-    }
-
-    footer{
-        padding:20px 24px;
-        text-align:center;
-    }
+    /*
+    O Grid faz uma área para cada elemento principal.
+    As colunas ficam centralizadas e o gap mantém a distância
+    que já existia entre os elementos
+    */
+    display:grid; 
+    grid-template-columns:repeat(auto-fit, minmax(500px, 650px)); 
+    justify-content:center; 
+    align-items:center; 
+    gap:40px 70px; 
+    box-sizing:border-box; 
+} 
+ 
+section{ 
+    position:relative; 
+    width:100%; 
+    max-width:650px; 
+} 
+ 
+table{ 
+    width:100%; 
+    border:4px solid #ff6167; 
+    border-radius:25px; 
+    background:#fff8e6; 
+    padding:25px; 
+    border-collapse:collapse; 
+    box-shadow:0 10px 25px rgba(0,0,0,.15); 
+} 
+ 
+caption{ 
+    font-size:30px; 
+    font-weight:bold; 
+    margin-bottom:20px; 
+    color:#333; 
+} 
+ 
+thead th{ 
+    background:#ff6167; 
+    color:white; 
+    padding:15px; 
+} 
+ 
+tbody td{ 
+    padding:15px; 
+    border-bottom:1px solid #f5d9a8; 
+    text-align:center; 
+} 
+ 
+tbody tr:nth-child(even){ 
+    background:#ffe9c2; 
+} 
+ 
+tbody img{ 
+    width:80px; 
+    height:80px; 
+    border-radius:12px; 
+    object-fit:cover; 
+} 
+ 
+.estrela-topo{ 
+    position:absolute; 
+    width:80px; 
+    top:-20px; 
+    left:-35px; 
+} 
+ 
+.estrela-baixo{ 
+    position:absolute; 
+    width:70px; 
+    right:-25px; 
+    bottom:-25px; 
+} 
+ 
+.alcremie{ 
+    width:min(100%, 590px); 
+    max-width:590px; 
+    height:auto; 
+} 
+ 
+.section-two{ 
+    /*
+    coloca a imagem e o container um do lado do outro
+    e quando não houver espaço suficiente, eles vão pra
+    uma nova linha automaticamente.
+    */
+    display:grid; 
+    grid-template-columns:minmax(280px, 380px) minmax(320px, 750px); 
+    justify-content:center; 
+    align-items:center; 
+    max-width:1400px; 
+    width:100%; 
+    margin:80px auto; 
+    padding:0 20px; 
+    gap:40px 60px; 
+    box-sizing:border-box; 
+} 
+ 
+.alcremie-amarelo{ 
+    width:min(100%, 380px); 
+    max-width:380px; 
+    height:auto; 
+} 
+ 
+.container{ 
+    width:100%; 
+    max-width:750px; 
+    min-width:min(100%, 320px); 
+    background:#fff8e6; 
+    border:4px solid #ff6167; 
+    border-radius:30px; 
+    padding:40px; 
+    box-sizing:border-box; 
+    box-shadow:0 10px 25px rgba(255,97,103,.25); 
+} 
+ 
+.container h2{ 
+    margin:0 0 20px; 
+    color:#ff6167; 
+    font-size:34px; 
+    text-align:center; 
+} 
+ 
+.container p{ 
+    color:#ac3e41; 
+    margin:0; 
+    font-size:20px; 
+    line-height:1.7; 
+    text-align:justify; 
+} 
+ 
+footer{ 
+    background:#ff6167; 
+    text-align:left; 
+    margin:80px 0 0; 
+    color:#ffffff; 
+    width:100%; 
+    box-sizing:border-box; 
+    padding:25px 60px; 
+} 
+ 
+@media (max-width:900px){ 
+    main{ 
+        /*
+        Em telas menores, vai permitir que os elementos
+        ocupem uma coluna apenas quando não houver espaço lateral.
+        */
+        grid-template-columns:minmax(0, 650px); 
+        gap:30px; 
+    } 
+ 
+    .section-two{ 
+        grid-template-columns:minmax(280px, 380px) minmax(0, 750px); 
+        margin-top:50px; 
+    } 
+ 
+    .container{ 
+        padding:30px; 
+    } 
+} 
+ 
+@media (max-width:600px){ 
+    .logo{ 
+        width:220px; 
+    } 
+ 
+    .nav-top ul{ 
+        /*
+        No celular o Grid passa a ter uma coluna,
+        deixar os botões um abaixo do outro.
+        */
+        grid-template-columns:1fr; 
+        gap:12px; 
+    } 
+ 
+    .nav-top a{ 
+        width:100%; 
+        text-align:center; 
+    } 
+ 
+    section{ 
+        min-width:0; 
+    } 
+ 
+    table{ 
+        display:block; 
+        overflow-x:auto; 
+    } 
+ 
+    caption{ 
+        font-size:24px; 
+    } 
+ 
+    .alcremie, 
+    .alcremie-amarelo{ 
+        max-width:280px; 
+    } 
+ 
+    .section-two{ 
+        /*
+        pra ficar em telas pequenas, imagem e texto fica um abaixo do outro.
+        */
+        grid-template-columns:1fr; 
+    } 
+ 
+    .container{ 
+        padding:22px; 
+        border-radius:20px; 
+    } 
+ 
+    .container h2{ 
+        font-size:28px; 
+    } 
+ 
+    .container p{ 
+        font-size:18px; 
+    } 
+ 
+    footer{ 
+        padding:20px 24px; 
+        text-align:center; 
+    } 
 }
