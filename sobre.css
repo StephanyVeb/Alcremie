@@ -24,10 +24,15 @@ body{
 }
 
 .nav-top ul{
-    display:flex;
+    /*
+    organiza os botões automaticamente em colunas.
+    O auto-fit permite que novas colunas sejam criadas
+    quando houver espaço disponível.
+    */
+    display:grid;
+    grid-template-columns:repeat(auto-fit, max-content);
     justify-content:center;
     align-items:center;
-    flex-wrap:wrap;
     gap:20px 30px;
     list-style:none;
     padding:0;
@@ -56,9 +61,14 @@ main{
     margin:40px auto;
     position:relative;
     padding:0 20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+
+    /*
+    blocos principais ficam certinhos em uma coluna.
+    as caixas de texto continuam na vertical desse jeito
+    */
+    display:grid;
+    grid-template-columns:1fr;
+    justify-items:center;
     gap:30px;
     box-sizing:border-box;
 }
@@ -100,13 +110,18 @@ main{
 .cards{
     width:100%;
     max-width:900px;
-    display:flex;
+
+    /*
+    cada caixa vai ocupar uma coluna
+    O minmax permite que eles tenham no mínimo 280px
+    e aumentem até preencher oque de espaço estiver disponível.
+    */
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
     gap:30px;
-    flex-wrap:wrap;
 }
 
 .card{
-    flex:1 1 280px;
     background:#fff8e6;
     border:4px solid #ff6167;
     border-radius:25px;
@@ -175,7 +190,11 @@ footer p{
     }
 
     .nav-top ul{
-        flex-direction:column;
+        /*
+        Em telas pequenas utiliza uma só coluna,
+        colocando cada botão abaixo do anterior.
+        */
+        grid-template-columns:1fr;
         gap:12px;
     }
 
@@ -186,5 +205,13 @@ footer p{
 
     main{
         padding:0 16px;
+    }
+
+    .cards{
+        /*
+        as caixas de texto ocupam uma coluna só
+        pra não ficarem apertados no celular.
+        */
+        grid-template-columns:1fr;
     }
 }
