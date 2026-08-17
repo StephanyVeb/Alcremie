@@ -25,11 +25,10 @@ body{
 
 .nav-top ul{
     /*
-    organiza os links do menu em colunas.
-    O auto-fit permite que eles se ajustem ao espaço disponível.
+    links do menu em colunas.
     */
     display:grid;
-    grid-template-columns:repeat(auto-fit, max-content);
+    grid-template-columns:repeat(3, auto);
     justify-content:center;
     align-items:center;
     gap:20px 30px;
