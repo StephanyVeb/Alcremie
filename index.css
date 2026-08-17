@@ -25,8 +25,7 @@ body{
  
 .nav-top ul{ 
     /*
-    organiza links em colunas automáticas.
-    Cada link ocupa uma coluna e o gap da o espaço entre eles.
+    organiza links >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     */
     display:grid; 
     grid-template-columns:repeat(3, auto); 
@@ -61,9 +60,7 @@ main{
     padding:0 20px; 
 
     /*
-    O Grid faz uma área para cada elemento principal.
-    As colunas ficam centralizadas e o gap mantém a distância
-    que já existia entre os elementos
+     área para cada elemneto principal >>>>>>>>>>>>>>>>>>>>>>>>>>
     */
     display:grid; 
     grid-template-columns:repeat(3, auto); 
@@ -122,7 +119,7 @@ tbody img{
 .estrela-topo{ 
     position:absolute; 
     width:80px; 
-    top:-20px; 
+    top:-30px; 
     left:-35px; 
 } 
  
@@ -141,9 +138,9 @@ tbody img{
  
 .section-two{ 
     /*
-    coloca a imagem e o container um do lado do outro
+    coloca a imagem e container um do lado do outro >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     e quando não houver espaço suficiente, eles vão pra
-    uma nova linha automaticamente.
+    uma nova linha
     */
     display:grid; 
     grid-template-columns:minmax(280px, 380px) minmax(320px, 750px); 
@@ -203,7 +200,7 @@ footer{
 @media (max-width:900px){ 
     main{ 
         /*
-        Em telas menores, vai permitir que os elementos
+        Em telas menores, vai permitir que os elementos >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         ocupem uma coluna apenas quando não houver espaço lateral.
         */
         grid-template-columns:minmax(0, 650px); 
@@ -227,7 +224,7 @@ footer{
  
     .nav-top ul{ 
         /*
-        No celular o Grid passa a ter uma coluna,
+        No celular o Grid passa a ter uma coluna, >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         deixar os botões um abaixo do outro.
         */
         grid-template-columns:1fr; 
@@ -259,7 +256,7 @@ footer{
  
     .section-two{ 
         /*
-        pra ficar em telas pequenas, imagem e texto fica um abaixo do outro.
+        pra ficar em telas pequenas, imagem e texto fica um abaixo do outro. >>>>>>>>>>>>>>>>>>>>>>>>>>
         */
         grid-template-columns:1fr; 
     } 
