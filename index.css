@@ -29,7 +29,7 @@ body{
     Cada link ocupa uma coluna e o gap da o espaço entre eles.
     */
     display:grid; 
-    grid-template-columns:repeat(auto-fit, max-content); 
+    grid-template-columns:repeat(3, auto); 
     justify-content:center; 
     align-items:center; 
     gap:20px 30px; 
