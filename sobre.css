@@ -24,13 +24,8 @@ body{
 }
 
 .nav-top ul{
-    /*
-    organiza os botões automaticamente em colunas.
-    O auto-fit permite que novas colunas sejam criadas
-    quando houver espaço disponível.
-    */
     display:grid;
-    grid-template-columns:repeat(auto-fit, max-content);
+    grid-template-columns:repeat(3, auto);
     justify-content:center;
     align-items:center;
     gap:20px 30px;
